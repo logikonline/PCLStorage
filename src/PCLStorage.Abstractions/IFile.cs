@@ -72,6 +72,15 @@ namespace PCLStorage
         /// <param name="collisionOption">How to deal with collisions with existing files.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A task which will complete after the file is moved.</returns>
-        Task MoveAsync(string newPath, NameCollisionOption collisionOption = NameCollisionOption.ReplaceExisting, CancellationToken cancellationToken = default(CancellationToken));
+		Task MoveAsync(string newPath, NameCollisionOption collisionOption = NameCollisionOption.ReplaceExisting, CancellationToken cancellationToken = default(CancellationToken));
+		
+		/// <summary>
+		/// Copies a file.
+		/// </summary>
+		/// <param name="newPath">The new full path of the file.</param>
+		/// <param name="collisionOption">How to deal with collisions with existing files.</param>
+		/// <param name="cancellationToken">The cancellation token.</param>
+		/// <returns>A task which will complete after the file is moved.</returns>
+		Task CopyAsync(string newPath, NameCollisionOption collisionOption = NameCollisionOption.ReplaceExisting, CancellationToken cancellationToken = default(CancellationToken));
     }
 }
