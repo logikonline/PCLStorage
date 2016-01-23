@@ -143,6 +143,9 @@ namespace PCLStorage
         Task MoveAsync(string newPath,
           NameCollisionOption collisionOption = NameCollisionOption.ReplaceExisting,
           CancellationToken cancellationToken = default(CancellationToken));
+        Task CopyAsync(string newPath,
+          NameCollisionOption collisionOption = NameCollisionOption.ReplaceExisting,
+          CancellationToken cancellationToken = default(CancellationToken));
     }
 
     public static class PortablePath
